@@ -61,40 +61,40 @@ Arrhenius-type stress link on the standardized scale $x \in [0, 1]$
 ($x = 0$ use condition, $x = 1$ highest stress). Parameter vector
 $\theta = (\alpha_0, \alpha_1, \lambda, q)$.
 
-$$
+```math
 Y_x(t) \sim \mathrm{IG}\bigl(\mu_x \Lambda(t),\ \lambda\,\Lambda(t)^2\bigr),
 \qquad \mu_x = e^{\alpha_0 + \alpha_1 x}, \qquad \Lambda(t) = t^{q}.
-$$
+```
 
 Increments over disjoint intervals are independent, with $\delta = t_2^{q} - t_1^{q}$:
 
-$$
+```math
 Y_x(t_2) - Y_x(t_1) \sim \mathrm{IG}\bigl(\mu_x\,\delta,\ \lambda\,\delta^2\bigr).
-$$
+```
 
 **First passage.** A unit fails when degradation crosses the threshold $\omega$. IG paths are
 a.s. increasing, so with $a = \mu_x\Lambda(t)$, $b = \lambda\Lambda(t)^2$,
 $u_1 = \sqrt{b/\omega}\,(1 - \omega/a)$, $u_2 = \sqrt{b/\omega}\,(1 + \omega/a)$:
 
-$$
+```math
 F_x(t) = \Pr(T_x \le t) = \Pr\{Y_x(t) \ge \omega\}
 = \Phi(u_1) - e^{2b/a}\,\Phi(-u_2).
-$$
+```
 
 **Use-condition quantile** (closed-form normal approximation, used for inference):
 
-$$
+```math
 \xi_p(x) \approx
 \left[\frac{\mu_x}{4\lambda}\left(z_p + \sqrt{z_p^{2} + 4\lambda\omega/\mu_x^{2}}\,\right)^{2}\right]^{1/q},
 \qquad \xi_p \equiv \xi_p(0).
-$$
+```
 
 **Cumulative exposure across the stage change (path-level).** A unit at degradation level $b$
 when the stress switches $x_0 \to x_1$ has **virtual age**
 
-$$
+```math
 w(b) = \bigl(b / \mu_{x_1}\bigr)^{1/q},
-$$
+```
 
 and its continuation increment over $(u_{j-1}, u_j]$ is
 $\mathrm{IG}\big(\mu_{x_1}\Delta\Lambda_{j},\ \lambda\Delta\Lambda_{j}^{2}\big)$ with
@@ -105,11 +105,11 @@ $\Delta\Lambda_{j} = (w + u_j)^{q} - (w + u_{j-1})^{q}$.
 All schemes share the stage-0 failure / censoring block (identical $n$, $\tau_1$, $T_{\max}$,
 withdrawal rule):
 
-$$
+```math
 \ell_0 = \sum_{i:\ \text{failures}} \log f_{x_0}(t_i)
 \;+\; \sum_{i:\ \text{alive at } T_{\max}} \log\bigl(1 - F_{x_0}(T_{\max})\bigr)
 \;+\; r_1^{\ast}\,\log\bigl(1 - F_{x_0}(\tau_1)\bigr)
-$$
+```
 
 and differ only in the term for the $r_1^{\ast}$ withdrawn units:
 
@@ -119,21 +119,21 @@ and differ only in the term for the $r_1^{\ast}$ withdrawn units:
 | **(b)** SLT re-test | latent level $B \sim \mathrm{IG}$ truncated at $\omega$: $\ \log\int_0^{\omega} f_{\mathrm{IG}}(b)\,g(u \mid b)\,db\ $ (Gauss–Legendre quadrature) |
 | **(c)** SLT-D | **closed form** (baseline $b_k$ + increments $\Delta_{kj}$): |
 
-$$
+```math
 \ell_c = \ell_0
 \;+\; \sum_k \log f_{\mathrm{IG}}\bigl(b_k \,;\, \mu_{x_0}\tau_1^{q},\ \lambda\tau_1^{2q}\bigr)
 \;+\; \sum_k \sum_j \log f_{\mathrm{IG}}\bigl(\Delta_{kj} \,;\, \mu_{x_1}\Delta\Lambda_{kj},\ \lambda\Delta\Lambda_{kj}^{2}\bigr)
-$$
+```
 
 **Planning information** splits additively, and the design criterion follows by the delta method
 on the closed-form quantile ($g = \log\xi_p$):
 
-$$
+```math
 \mathcal{I}(\theta) = \underbrace{\mathcal{I}_{\text{fail}}}_{\text{stage-0 failures}}
 + \underbrace{\mathcal{I}_{\text{deg}}}_{\text{rig readings}},
 \qquad
 \mathrm{Avar}(\log\hat\xi_p) = \nabla g^{\top}\,\mathcal{I}(\theta)^{-1}\,\nabla g
-$$
+```
 
 with an **alive-weighting** correction to $\mathcal{I}_{\text{deg}}$ for withdrawn units that fail
 mid-rig. Full derivations: [MODEL.md](MODEL.md).
