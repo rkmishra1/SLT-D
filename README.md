@@ -116,7 +116,7 @@ and differ only in the term for the $r_1^{\ast}$ withdrawn units:
 | Scheme | Withdrawn-unit contribution |
 |---|---|
 | **(a)** discard | none — $\ell_a = \ell_0$ (single stress; $\xi_p$ at $x=0$ is **not identifiable**) |
-| **(b)** SLT re-test | latent level $B \sim \mathrm{IG}$ truncated at $\omega$: $\ \log\int_0^{\omega} f_{\mathrm{IG}}(b)\,g(u \mid b)\,db\ $ (Gauss–Legendre quadrature) |
+| **(b)** SLT re-test | latent level $B \sim \mathrm{IG}$ truncated at $\omega$: $\log\int_0^{\omega} f_{\mathrm{IG}}(b)\,g(u \mid b)\,db$ (Gauss–Legendre quadrature) |
 | **(c)** SLT-D | **closed form** (baseline $b_k$ + increments $\Delta_{kj}$): |
 
 ```math
