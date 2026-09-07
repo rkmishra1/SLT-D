@@ -96,7 +96,7 @@ All schemes share the stage-0 failure / censoring block (identical $n$, $\tau_1$
 withdrawal rule):
 
 $$\ell_0 = \sum_{\text{failures } i} \log f_{x_0}(t_i)
-+ \sum_{\text{alive at } T_{\max}} \log\big(1 - F_{x_0}(T_{\max})\big) + r_1^{\ast}\,\log\big(1 - F_{x_0}(\tau_1)\big),$$
++ \sum_{\text{alive at } T_{\max}} \log\big(1 - F_{x_0}(T_{\max})\big) + r_1^{\ast}\log\big(1 - F_{x_0}(\tau_1)\big),$$
 
 and differ only in the term for the $r_1^{\ast}$ withdrawn units:
 
