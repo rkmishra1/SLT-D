@@ -20,3 +20,6 @@ results/*.npz
 
 # OS junk
 .DS_Store
+
+# manuscript source kept out of the repo
+paper/
