@@ -1,0 +1,18 @@
+=== constrained-optimal SLT-D plan ===
+optimal SLT-D: x0=0.10 tau1=1750 pi1=0.90 x1=0.85 step=150 n=20 -> Asvar=0.0362 (std e^0.19)
+
+=== unconstrained two-level parallel ADT, same budget ===
+optimal ADT: xa=0.00 xb=0.20 n=(12,4) step=150 -> Asvar=0.0066 (std e^0.08)
+price of the sequential constraint (ADT/SLT-D Asvar ratio): 0.18
+
+=== L9 (+-10%) plan robustness ===
+eps=[-0.1 -0.1 -0.1 -0.1] plan(x0,tau1,pi1,x1,step,n)=[4.6e-01 2.0e+03 9.0e-01 1.0e+00 1.5e+02 2.0e+01] Asvar@true=0.0861
+eps=[-0.1  0.   0.   0. ] plan(x0,tau1,pi1,x1,step,n)=[4.6e-01 2.5e+03 9.0e-01 1.0e+00 1.5e+02 2.2e+01] Asvar@true=0.0851
+eps=[-0.1  0.1  0.1  0.1] plan(x0,tau1,pi1,x1,step,n)=[4.6e-01 5.0e+02 5.0e-01 1.0e+00 5.0e+02 2.6e+01] Asvar@true=0.2323
+eps=[ 0.  -0.1  0.   0.1] plan(x0,tau1,pi1,x1,step,n)=[4.6e-01 2.5e+03 9.0e-01 1.0e+00 1.5e+02 2.2e+01] Asvar@true=0.0851
+eps=[ 0.   0.   0.1 -0.1] plan(x0,tau1,pi1,x1,step,n)=[4.6e-01 2.0e+03 9.0e-01 1.0e+00 1.5e+02 2.0e+01] Asvar@true=0.0861
+eps=[ 0.   0.1 -0.1  0. ] plan(x0,tau1,pi1,x1,step,n)=[4.6e-01 2.5e+03 9.0e-01 1.0e+00 1.5e+02 2.2e+01] Asvar@true=0.0851
+eps=[ 0.1 -0.1  0.1  0. ] plan(x0,tau1,pi1,x1,step,n)=[4.6e-01 1.5e+03 9.0e-01 1.0e+00 1.5e+02 1.9e+01] Asvar@true=0.0924
+eps=[ 0.1  0.  -0.1  0.1] plan(x0,tau1,pi1,x1,step,n)=[4.6e-01 2.5e+03 9.0e-01 1.0e+00 1.5e+02 2.2e+01] Asvar@true=0.0851
+eps=[ 0.1  0.1  0.  -0.1] plan(x0,tau1,pi1,x1,step,n)=[4.6e-01 2.0e+03 9.0e-01 1.0e+00 1.5e+02 2.0e+01] Asvar@true=0.0861
+wrote results/design_results.json

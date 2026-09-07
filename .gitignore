@@ -1,0 +1,22 @@
+# caches / build artifacts
+__pycache__/
+*.pyc
+*.pyo
+
+# LaTeX build artifacts
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+paper/*.bbl
+paper/*.blg
+paper/pages/
+
+# intermediate numeric arrays (regenerable via scripts/ridge_figure.py)
+results/*.npy
+results/*.npz
+
+# OS junk
+.DS_Store

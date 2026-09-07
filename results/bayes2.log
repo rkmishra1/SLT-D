@@ -1,0 +1,12 @@
+
+=== kappa=1.0 (prior sd on z: [0.191 0.175 0.312 0.04 ]) ===
+evaluated 2160 feasible combos (227s)
+bayes-optimal: [3.00e-01 2.25e+03 9.00e-01 1.00e+00 1.50e+02 2.10e+01] J= 0.0539 p90= 0.0599
+plug-in:       [3.00e-01 2.25e+03 9.00e-01 1.00e+00 1.50e+02 2.10e+01] J= 0.0539 p90= 0.0599
+
+=== kappa=4.0 (prior sd on z: [0.191 0.175 0.312 0.04 ]) ===
+evaluated 2160 feasible combos (495s)
+bayes-optimal: [3.0e-01 2.5e+03 9.0e-01 1.0e+00 1.5e+02 2.2e+01] J= 0.0562 p90= 0.0682
+plug-in:       [3.00e-01 2.25e+03 9.00e-01 1.00e+00 1.50e+02 2.10e+01] J= 0.0564 p90= 0.07
+
+wrote results/bayes_design.json (498s)

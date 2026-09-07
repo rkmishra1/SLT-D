@@ -1,0 +1,23 @@
+AF = 47.9 (Ea=0.7 eV, 300K->350K); population xi_0.1 = 3611 h
+per-unit rates: mean=0.00204 CV=0.221 (log-sd=0.206)
+100/1500 (3s)
+200/1500 (4s)
+300/1500 (5s)
+400/1500 (6s)
+500/1500 (7s)
+600/1500 (12s)
+700/1500 (16s)
+800/1500 (20s)
+900/1500 (24s)
+/Users/ramakrushna/Downloads/Deepak_Prajapati2/idea3_stage_degradation/src/study_laser.py:203: RuntimeWarning: divide by zero encountered in log
+  lx = float(np.log(ig.xi_p_approx(0.1, 0.0, th_hat, OMEGA)))
+1000/1500 (28s)
+1100/1500 (40s)
+1200/1500 (51s)
+1300/1500 (61s)
+1400/1500 (71s)
+1500/1500 (81s)
+full    : bias=+0.133 rmse=0.156 mdae=0.141
+sltd    : bias=+0.139 rmse=0.230 mdae=0.099
+discard : bias=-inf rmse=inf mdae=0.068
+wrote results/laser_study.csv (1500, 5) 81s

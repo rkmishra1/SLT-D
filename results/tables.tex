@@ -1,0 +1,122 @@
+% auto-generated: tab:hierarchy
+\begin{tabular}{llrrrrrr}
+\toprule
+Scenario & Scheme & $\bar d_1$ & $\bar r_1^*$ & Bias & RMSE & MdAE & p90AE \\
+S1 (connector-like) & (a) & 0.02 & 9.98 & 33.435 & 52.855 & 20.587 & 93.500 \\
+S1 (connector-like) & (b) & 0.02 & 9.98 & 9.255 & 34.409 & 0.873 & 4.745 \\
+S1 (connector-like) & (c) & 0.02 & 9.98 & 0.094 & 0.920 & 0.609 & 1.478 \\
+\addlinespace
+S2 (moderate) & (a) & 10.60 & 4.46 & 11.571 & 23.283 & 3.810 & 44.466 \\
+S2 (moderate) & (b) & 10.60 & 4.46 & 0.438 & 1.749 & 0.654 & 2.855 \\
+S2 (moderate) & (c) & 10.60 & 4.46 & 0.028 & 0.550 & 0.335 & 0.879 \\
+\addlinespace
+S3 (severe) & (a) & 0.00 & 15.00 & 0.589 & 0.681 & 0.562 & 1.027 \\
+S3 (severe) & (b) & 0.00 & 15.00 & 2.725 & 8.875 & 0.241 & 10.434 \\
+S3 (severe) & (c) & 0.00 & 15.00 & 0.030 & 0.441 & 0.279 & 0.737 \\
+\bottomrule
+\end{tabular}
+
+% auto-generated: tab:pisweep
+\begin{tabular}{crrrrrrr}
+\toprule
+$\pi_1$ & Scheme & $\bar d_1$ & $\bar r_1^*$ & Bias & RMSE & MdAE & Cov. \\
+0.25 & (a) & 10.41 & 2.03 & 11.617 & 23.375 & 3.551 & 100.0 \\
+0.25 & (b) & 10.41 & 2.03 & 0.722 & 2.085 & 0.899 & 94.2 \\
+0.25 & (c) & 10.41 & 2.03 & 0.282 & 1.002 & 0.425 & 87.8 \\
+\addlinespace
+0.50 & (a) & 10.60 & 4.46 & 11.571 & 23.283 & 3.810 & 100.0 \\
+0.50 & (b) & 10.60 & 4.46 & 0.438 & 1.749 & 0.654 & 92.0 \\
+0.50 & (c) & 10.60 & 4.46 & 0.028 & 0.550 & 0.335 & 92.6 \\
+\addlinespace
+0.75 & (a) & 10.39 & 6.83 & 12.666 & 24.809 & 3.735 & 99.9 \\
+0.75 & (b) & 10.39 & 6.83 & 0.522 & 1.874 & 0.645 & 94.1 \\
+0.75 & (c) & 10.39 & 6.83 & -0.005 & 0.471 & 0.305 & 95.3 \\
+\addlinespace
+\bottomrule
+\end{tabular}
+
+% auto-generated: tab:avarcheck
+\begin{tabular}{lccc}
+\toprule
+Design & $n$ & predicted $\Asvar(\log\hat\xi_{0.1})$ & empirical var \\
+S1 & 20 & 0.658 & 0.839 \\
+S2 & 20 & 0.192 & 0.303 \\
+S3 & 30 & 0.175 & 0.194 \\
+\bottomrule
+\end{tabular}
+
+% auto-generated: tab:design
+\begin{tabular}{lrrrrrrr}
+\toprule
+Design & $x_0$/ $x_a$ & $\tau_1$ & $\pi_1$ & $x_1$/ $x_b$ & step & $n$ & $\Asvar$ \\
+constrained SLT-D & 0.10 & 1750 & 0.90 & 0.85 & 150 & 20 & 0.0362 \\
+parallel two-level ADT & 0.00 & -- & -- & 0.20 & 150 & 16 & 0.0066 \\
+\bottomrule
+\end{tabular}
+
+% auto-generated: tab:l9plan
+\begin{tabular}{rrrrrrrr}
+\toprule
+$\epsilon_{\alpha_0}$ & $\epsilon_{\alpha_1}$ & $\epsilon_{\lambda}$ & $\epsilon_q$ & $\tau_1$ & $\pi_1$ & step & $\Asvar$ at truth \\
+-10\% & -10\% & -10\% & -10\% & 2000 & 0.90 & 150 & 0.0391 \\
+-10\% & +0\% & +0\% & +0\% & 2250 & 0.90 & 150 & 0.0370 \\
+-10\% & +10\% & +10\% & +10\% & 3250 & 0.90 & 150 & 0.0518 \\
++0\% & -10\% & +0\% & +10\% & 2000 & 0.90 & 150 & 0.0364 \\
++0\% & +0\% & +10\% & -10\% & 1250 & 0.90 & 150 & 0.0369 \\
++0\% & +10\% & -10\% & +0\% & 2250 & 0.90 & 150 & 0.0370 \\
++10\% & -10\% & +10\% & +0\% & 1250 & 0.90 & 150 & 0.0369 \\
++10\% & +0\% & -10\% & +10\% & 2000 & 0.90 & 150 & 0.0364 \\
++10\% & +10\% & +0\% & -10\% & 1750 & 0.90 & 150 & 0.0362 \\
+\bottomrule
+\end{tabular}
+
+% auto-generated: tab:sensest
+\begin{tabular}{crrrrrrr}
+\toprule
+Combo & $\E[r_1^*]$ & \multicolumn{3}{c}{scheme (b)} & \multicolumn{3}{c}{scheme (c)} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}
+ & & Bias & RMSE & MdAE & Bias & RMSE & MdAE \\
+1 & 8.8 & 0.132 & 1.205 & 0.608 & -0.038 & 0.420 & 0.267 \\
+2 & 0.6 & 3.401 & 11.863 & 1.964 & 3.448 & 11.827 & 1.803 \\
+3 & 0.0 & 13.127 & 26.074 & 3.557 & 13.127 & 26.074 & 3.557 \\
+4 & 0.0 & 10.961 & 20.139 & 3.803 & 10.989 & 20.144 & 3.811 \\
+5 & 9.8 & 0.096 & 0.651 & 0.379 & 0.004 & 0.339 & 0.217 \\
+6 & 2.5 & 0.574 & 2.091 & 0.883 & 0.322 & 0.923 & 0.535 \\
+7 & 9.8 & 0.053 & 0.497 & 0.324 & -0.016 & 0.274 & 0.187 \\
+8 & 0.4 & 5.350 & 13.247 & 2.242 & 5.453 & 13.221 & 2.138 \\
+9 & 10.0 & 2.739 & 15.519 & 0.324 & 0.040 & 0.371 & 0.247 \\
+\bottomrule
+\end{tabular}
+% auto-generated: tab:kstage
+\begin{tabular}{cp{4.6cm}rrrrrr}
+\toprule
+$K$ & stages $(\tau,\pi,x)$ & $\E[R_1^{*}]$ & $\E[\#\text{readings}]$ & Bias & RMSE & MdAE & RMSE$\cdot\sqrt{r}$ \\
+$1$ & $(2000,\,0.50,\,0.78)$ & 4.49 & 14.7 & +0.045 & 0.540 & 0.337 & 2.07 \\
+$2$ & $(1500,0.30,0.78)$; $(3000,0.30,1)$ & 4.40 & 19.8 & +0.021 & 0.458 & 0.302 & 2.04 \\
+$3$ & $(1000,0.15,0.78)$; $(2000,0.20,0.90)$; $(3500,0.25,1)$ & 3.87 & 20.6 & -0.001 & 0.421 & 0.308 & 1.91 \\
+\bottomrule
+\end{tabular}
+
+% auto-generated: tab:bayes
+\begin{tabular}{llrrrrrrrrr}
+\toprule
+Prior & Plan & $x_0$ & $\tau_1$ & $\pi_1$ & $x_1$ & step & $n$ & $J$ & $J_{90}$ & $\Asvar$ at mean \\
+$\kappa{=}1$ & Bayesian & 0.10 & 1750 & 0.9 & 0.85 & 150 & 20 & 0.0368 & 0.0411 & 0.0362 \\
+$\kappa{=}1$ & plug-in & 0.10 & 1750 & 0.9 & 0.85 & 150 & 20 & 0.0368 & 0.0411 & 0.0362 \\
+\addlinespace
+$\kappa{=}4$ & Bayesian & 0.10 & 1750 & 0.9 & 0.85 & 150 & 20 & 0.0380 & 0.0472 & 0.0362 \\
+$\kappa{=}4$ & plug-in & 0.10 & 1750 & 0.9 & 0.85 & 150 & 20 & 0.0380 & 0.0472 & 0.0362 \\
+\addlinespace
+\bottomrule
+\end{tabular}
+
+% auto-generated: tab:laser
+\begin{tabular}{lccrrrr}
+\toprule
+Design & monitored & degenerate & Bias & RMSE & MdAE & $p_{90}$AE \\\\
+ & units & fits & & & & \\\\
+full monitoring (historical) & 15 from $t{=}0$ & 0/500 & +0.133 & 0.156 & 0.141 & 0.239 \\
+\SLTD{} ($\tau_1{=}2000$, $\pi_1{=}0.5$) & $\approx7$ from $\tau_1$ & 0/500 & +0.139 & 0.230 & 0.099 & 0.358 \\
+life test only & 0 & 1/500 & +0.042 & 0.193 & 0.068 & 0.216 \\
+\bottomrule
+\end{tabular}
