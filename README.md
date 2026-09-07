@@ -96,8 +96,7 @@ All schemes share the stage-0 failure / censoring block (identical $n$, $\tau_1$
 withdrawal rule):
 
 $$\ell_0 = \sum_{\text{failures } i} \log f_{x_0}(t_i)
-\;+\; \sum_{\text{alive at } T_{\max}} \log\!\big(1 - F_{x_0}(T_{\max})\big)
-\;+\; r_1^{\ast}\,\log\!\big(1 - F_{x_0}(\tau_1)\big),$$
++ \sum_{\text{alive at } T_{\max}} \log\big(1 - F_{x_0}(T_{\max})\big) + r_1^{\ast}\,\log\big(1 - F_{x_0}(\tau_1)\big),$$
 
 and differ only in the term for the $r_1^{\ast}$ withdrawn units:
 
@@ -108,8 +107,8 @@ and differ only in the term for the $r_1^{\ast}$ withdrawn units:
 | **(c)** SLT-D | **closed form** (baseline $b_k$ + increments $\Delta_{kj}$): |
 
 $$\ell_c = \ell_0
-+ \sum_k \log f_{\mathrm{IG}}\!\big(b_k;\ \mu_{x_0}\tau_1^{q},\ \lambda\tau_1^{2q}\big)
-+ \sum_k \sum_j \log f_{\mathrm{IG}}\!\big(\Delta_{kj};\ \mu_{x_1}\Delta\Lambda_{kj},\ \lambda\Delta\Lambda_{kj}^{2}\big).$$
++ \sum_k \log f_{\mathrm{IG}}\big(b_k \mu_{x_0}\tau_1^{q},\ \lambda\tau_1^{2q}\big)
++ \sum_k \sum_j \log f_{\mathrm{IG}}\big(\Delta_{kj} \mu_{x_1}\Delta\Lambda_{kj} \lambda\Delta\Lambda_{kj}^{2}\big).$$
 
 **Planning information** splits additively, and the design criterion follows by the delta method
 on the closed-form quantile ($g = \log\xi_p$):
